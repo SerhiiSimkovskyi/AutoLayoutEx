@@ -35,6 +35,11 @@ class SimpleStackVC: UIViewController {
         default:
             labelHint.text = "?"
         }
+        
+        // Optional code: let's animate autolayout changes slowly
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        });
     }
     
     @IBAction func actionPlay(_ sender: Any) {
